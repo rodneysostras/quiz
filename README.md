@@ -44,7 +44,7 @@
 
 ## 💻 Sobre o projeto
 
-🤩 test-waproject-01 - Um teste realizado para Wa Project que seria uma aplicação Web para responder questionários.
+🤩 test-waproject-01 - Uma prova realizado para Wa Project que seria uma aplicação Web para responder questionários.
 
 ## 📦 Requisitos
 
