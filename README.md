@@ -1,8 +1,8 @@
 <div align="center">
-    <img src="https://github.com/rodneysostras/rodneysostras/blob/main/assets/img/rodney-sostras-logo-cursiva.png" alt="" height="150em"/>
+    <img src="https://github.com/rodneysostras/test-waproject-01/blob/main/icon-readme.png" alt="" height="150em"/>
 </div>
 
-# 🤩 Portfólio
+# 📃 Test WA Project
 
 <div align="center">
     <img src="https://img.shields.io/badge/%F0%9F%9A%A7%20EM%20CONTRU%C3%87%C3%83O%20-10%25-brightgreen?style=for-the-badge" />
@@ -20,7 +20,7 @@
 
 <br />
 
-<div align="center"><img src="https://github.com/rodneysostras/test-waproject-01/blob/main/public/img/previewer-dispositivos.png" alt="exemplo imagem" height="450em"/></div>
+<div align="center"><img src="https://github.com/rodneysostras/test-waproject-01/blob/main/previewer-devices-readme.png" alt="exemplo imagem" height="450em"/></div>
 
 <div align="center"><em>Uma aplicação Web em ReactJS para responder questionários de perguntas sobre conhecimento gerais com as seguintes tecnologias.</em></div>
 
@@ -28,39 +28,64 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
-  <img src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white" />
-  <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
-  <img src="https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white" />
-  <img src="https://img.shields.io/badge/Prettier-ff69b4?style=for-the-badge&logo=Prettier&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/>
 </div>
 
 <br />
 
 <p align="center">
     <a href="#-sobre-o-projeto">Sobre</a> •
-    <a href="#-recursos">Recursos</a> •
+    <a href="#-requisitos">Requisitos</a> •
     <a href="#-como-executar-o-projeto">Como executar</a> •
     <a href="#-tecnologias">Tecnologias</a> •
     <a href="#-autor">Autor</a> • 
-    <a href="#-creditos">Creditos</a> •
     <a href="#-licença">Licença</a>
 </p>
 
 ## 💻 Sobre o projeto
 
-🤩 test-waproject-01 - Uma prova para Wa Project uma aplicação Web para responder questionários.
+🤩 test-waproject-01 - Um teste realizado para Wa Project que seria uma aplicação Web para responder questionários.
 
-## 📦 Recursos
+## 📦 Requisitos
 
-- [ ] {}        
+- [ ] Usuários pode escolhe quantidade de perguntas que deseja responder.
+- [ ] Uma página de checkout antes do teste.
+    - Deve conter um botão de start para iniciar o teste.
+    - Deve conter um botão de cancel para retorna a página de escolha de quantidade de perguntas.
+- [ ] Consumir a API de perguntas que foi disponibilizada.
+- [ ] Página de relatorios.
+    - Exibir a quantidade de acertos e erros.
+    - Uma lista com as questões, com a resposta escolhida e a resposta certas.
+- [ ] Salvar os relatórios em localStorage e exibir na página inicial caso possua algum salvo.
+
+<br />
+
+<blockquote>
+• Descrição do problema
+
+Imagine que você foi contratado para desenvolver uma aplicação WEB para responder questionários de perguntas sobre conhecimentos gerais. Ao acessar a página, o usuário deve escolher a quantidade de perguntas que deseja responder. Após escolher, deve aparecer uma página com dois botões, “Start” e “Cancel”. Ao selecionar “Cancel”, deve retornar para escolher a quantidade. Ao selecionar “Start” deve fazer requisição na URL disponibilizada, pegar as perguntas e a cada pergunta, deve exibir as respostas. O usuário deve escolher uma resposta e a cada resposta deve contabilizar quantidade de acertos e erros. Ao final, deve vir um relatório com a quantidade de acertos e erros e uma lista de cada questão e qual foi certo e qual foi errado. Nessa lista também deve aparecer a resposta escolhida e a resposta correta. A pontuação deve ser guardada em no localStorage. Na primeira página e se houver um questionário salvo no localStorage, deve ter a possibilidade de rever o relatório.
+
+• Requisitos não funcionais
+
+É obrigatório a utilização do framework React, Material UI e usar a URL para gerar as questões .......
+
+• Requisitos não obrigatórios
+
+Você será bem avaliado se usar Context API, Axio, Hooks, Formik, testes de comportamento e se você realizar um deploy em algum link. Além disso, vamos dar uma atenção maior quando demonstrar uma boa apresentação de design e uso de design patterns (como services, repositories, factories, builders e etc)
+
+• Sobre o prazo?
+
+Lembrando que prazo dado para nós é prazo cumprido e vamos prezar por aqueles candidatos que entregarem o projeto no prazo que pediu e com a coerência da tarefa (sabemos que vocês trabalham em outros locais e/ou estudam, isso será levado em consideração, não se preocupe).
+
+</blockquote>
 
 ## 🚀 Como executar o projeto
 
 ```bash
 # Clone este repositório
-$ git clone git@github.com:rodneysostras/reactjs-weather.git
+$ git clone git@github.com:rodneysostras/test-waproject-01.git
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd reactjs-weather
+$ cd test-waproject-01
 # Instale as dependências
 $ npm install
 # Execute a aplicação em modo de desenvolvimento
@@ -73,8 +98,6 @@ $ npm run start
 
 -   **[React](https://reactjs.org/)** • Framework Javascript open source utilizado para criar interfaces de usuário em paginas web.
 -   **[Axios](https://github.com/axios/axios)** • Cliente HTTP leve semelhante à API Fetch nativa do JavaScript.
--   **[Eslint](https://github.com/eslint/eslint)** • Ferramenta que analisa o código permite identificar erros quanto ao padrão de escrita que definimos.
--   **[Prettier](https://github.com/prettier/prettier)** • Ferramenta que analisa o código com finalidade de "forçar" um padrão de código.
 
 > Veja o arquivo  [package.json](https://github.com/rodneysostras/test-waproject-01/blob/main/package.json)
 ## 🦸 Autor
@@ -115,11 +138,6 @@ $ npm run start
 </p>
 
 <br />
-        
-## 🎨 Creditos
-
-- {}
-
       
 ## 📝 Licença
 
