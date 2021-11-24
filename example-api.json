@@ -1,0 +1,65 @@
+{
+    "response_code": 0,
+    "results": [
+      {
+        "category": "Animals",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "What is the scientific name of the cheetah?",
+        "correct_answer": "Acinonyx jubatus",
+        "incorrect_answers": [
+          "Panthera onca",
+          "Lynx rufus",
+          "Felis catus"
+        ]
+      },
+      {
+        "category": "Geography",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "What&#039;s the first National Park designated in the United States?",
+        "correct_answer": "Yellowstone",
+        "incorrect_answers": [
+          "Sequoia ",
+          "Yosemite",
+          "Rocky Mountain"
+        ]
+      },
+      {
+        "category": "Entertainment: Video Games",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "How many unique items does &quot;Borderlands 2&quot; claim to have?",
+        "correct_answer": "87 Bazillion ",
+        "incorrect_answers": [
+          "87 Million",
+          "87 Trillion",
+          "87 Gazillion "
+        ]
+      },
+      {
+        "category": "Geography",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "In which English county is the city of Portsmouth?",
+        "correct_answer": "Hampshire",
+        "incorrect_answers": [
+          "Oxfordshire",
+          "Buckinghamshire",
+          "Surrey"
+        ]
+      },
+      {
+        "category": "Entertainment: Video Games",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "Which character was introduced to the Super Smash Bros franchise in Super Smash Bros Melee?",
+        "correct_answer": "Sheik",
+        "incorrect_answers": [
+          "Samus",
+          "Lucas",
+          "Mega Man"
+        ]
+      }
+    ]
+  }

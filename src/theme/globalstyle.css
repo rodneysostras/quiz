@@ -1,0 +1,34 @@
+/*
+ ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+ │ Copyright (c) 2021 by the author of the test-waproject-01 project. All rights reserved.      │
+ │ This owner-supplied source code has no limitations on the condition imposed on the           │
+ │ maintenance of the copyright notice.                                                         │
+ │ For more information, read the LICENSE file at the root of the project.                      │
+ │ Written by author Rodney Sostras <rodney.sostras@gmail.com>.                                 │
+ └──────────────────────────────────────────────────────────────────────────────────────────────┘ */
+
+ *,
+ *::after,
+ *::before {
+     margin:0;
+     padding:0;
+     box-sizing: inherit;
+}
+
+html,
+body,
+#root {
+    min-height: 100vh;
+    width: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
