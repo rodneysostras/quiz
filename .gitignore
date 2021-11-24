@@ -16,8 +16,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # dotenv environment variable files
-!.env.example
 .env*
+!.env.example
 
 #lock
 yarn.lock

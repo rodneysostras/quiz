@@ -1,15 +1,25 @@
 /*
- ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
- │ Copyright (c) 2021 by the author of the test-waproject-01 project. All rights reserved.      │
- │ This owner-supplied source code has no limitations on the condition imposed on the           │
- │ maintenance of the copyright notice.                                                         │
- │ For more information, read the LICENSE file at the root of the project.                      │
- │ Written by author Rodney Sostras <rodney.sostras@gmail.com>.                                 │
- └──────────────────────────────────────────────────────────────────────────────────────────────┘ */
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Copyright (c) 2021 by the author of the Quiz project. All rights reserved.                   │
+│ This owner-supplied source code has no limitations on the condition imposed on the           │
+│ maintenance of the copyright notice.                                                         │
+│ For more information, read the LICENSE file at the root of the project.                      │
+│ Written by author Rodney Sostras <rodney.sostras@gmail.com>.                                 │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘ */
 
- *,
- *::after,
- *::before {
+:root {
+    --bg-color: #fafafa;
+    --font-color: #191919;
+}
+
+:root.dark-mode {
+    --bg-color: #191919;
+    --font-color: #fafafa;
+}
+
+*,
+*::after,
+*::before {
      margin:0;
      padding:0;
      box-sizing: inherit;
@@ -28,7 +38,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
+body{
+    background-color: var(--bg-color)!important;
+    color: var(--font-color)!important;
 }
