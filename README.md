@@ -2,7 +2,7 @@
     <img src="https://github.com/rodneysostras/test-waproject-01/blob/main/icon-readme.png" alt="" height="150em"/>
 </div>
 
-# 📃 Test WA Project
+# 📃 Quiz
 
 <div align="center">
     <img src="https://img.shields.io/badge/%F0%9F%9A%A7%20EM%20CONTRU%C3%87%C3%83O%20-10%25-brightgreen?style=for-the-badge" />
@@ -16,13 +16,13 @@
 
 <br />
 
-<div align="center"><a href="https://rodneysostras.me/test-waproject-01"><b>DEMO - https://rodneysostras.me/test-waproject-01/</b></a></div>
+<div align="center"><a href="https://rodneysostras.me/quiz"><b>DEMO - https://rodneysostras.me/quiz/</b></a></div>
 
 <br />
 
-<div align="center"><img src="https://github.com/rodneysostras/test-waproject-01/blob/main/previewer-devices-readme.png" alt="exemplo imagem" height="450em"/></div>
+<div align="center"><img src="https://github.com/rodneysostras/quiz/blob/main/previewer-devices-readme.png" alt="exemplo imagem" height="450em"/></div>
 
-<div align="center"><em>Uma aplicação Web em ReactJS para responder questionários de perguntas sobre conhecimento gerais com as seguintes tecnologias.</em></div>
+<div align="center"><em>Uma aplicação Web para responder questionários de perguntas sobre conhecimento gerais com as seguintes tecnologias.</em></div>
 
 <br />
 
@@ -44,7 +44,9 @@
 
 ## 💻 Sobre o projeto
 
-🤩 test-waproject-01 - Uma prova realizado para Wa Project que seria uma aplicação Web para responder questionários.
+🤩 quiz - Uma aplicação Web em ReactJS para responder questionários de perguntas sobre conhecimento gerais.
+
+Uma prova realizada para Wa Project que deve respeitar os requisitos abaixos.
 
 ## 📦 Requisitos
 
