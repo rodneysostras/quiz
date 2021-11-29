@@ -1,3 +1,6 @@
 {
-    "recommendations": ["dsznajder.es7-react-js-snippets"]
+    "recommendations": [
+        "dsznajder.es7-react-js-snippets",
+        "EditorConfig.EditorConfig"
+    ]
 }

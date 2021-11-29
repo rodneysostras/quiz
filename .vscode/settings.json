@@ -1,7 +1,4 @@
 {
     "editor.defaultFormatter": "EditorConfig.EditorConfig",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    }
+    "editor.formatOnSave": true
 }
