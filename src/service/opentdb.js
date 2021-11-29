@@ -42,9 +42,12 @@ export const mapCategory = {
 
 export const opentdb = {
     GetQuestions: async (amount, category = 0, difficulty = 0, type = 0) => {
+        const options = {
+            params: { amount, category, difficulty, type },
+        };
         return new Promise((resolve, reject) => {
             api_opentdb
-                .request({ amount, category, difficulty, type })
+                .request(options)
                 .then(({ data }) => {
                     resolve({});
                 })
