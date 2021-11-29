@@ -42,3 +42,24 @@ body{
     background-color: var(--bg-color)!important;
     color: var(--font-color)!important;
 }
+
+#root {
+    display:flex;
+    justify-content: center;
+}
+
+.container {
+    height: 50vh;
+    max-width: 780px;
+    margin-top: 2rem;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid #3f3f3f30;
+    overflow: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

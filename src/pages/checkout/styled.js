@@ -6,19 +6,27 @@
 // │ Written by author Rodney Sostras <rodney.sostras@gmail.com>.                                 │
 // └──────────────────────────────────────────────────────────────────────────────────────────────┘
 
-import * as React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import { makeStyles } from "@material-ui/core/styles";
 
-import { QuizContextProvider } from "./context/quiz";
+export const useStyles = makeStyles(() => ({
+    title: {
+        width: "100%",
+        fontSize: "24px",
+        fontWeight: 400,
+        textAlign: "center",
+    },
+    action: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        width: "80%",
+        margin: "0 auto",
+    },
 
-import "./theme/globalstyle.css";
+    info: {
+        width: "70%",
+        margin: "25px auto",
+    },
+}));
 
-ReactDOM.render(
-    <React.StrictMode>
-        <QuizContextProvider>
-            <App />
-        </QuizContextProvider>
-    </React.StrictMode>,
-    document.getElementById("root")
-);
+export default useStyles;

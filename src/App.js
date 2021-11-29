@@ -7,13 +7,38 @@
 // └──────────────────────────────────────────────────────────────────────────────────────────────┘
 
 import * as React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import { Container, Divider, Typography } from "@material-ui/core";
+import Home from "./pages/home";
+import Quiz from "./pages/quiz";
+import Checkout from "./pages/checkout";
 
 export default function App() {
     return (
         <React.Fragment>
             <CssBaseline />
-            {/* O resto da sua aplicação */}
+            <Container maxWidth="sm" style={{ marginTop: "2rem" }}>
+                <Typography
+                    variant="h1"
+                    align="center"
+                    style={{
+                        width: "100%",
+                        fontFamily: "'Fascinate Inline', cursive",
+                        fontSize: "64px",
+                    }}
+                >
+                    QUIZ
+                </Typography>
+                <Divider style={{ marginBottom: "1rem" }} />
+                <BrowserRouter>
+                    <Routes>
+                        <Route exact path="/" element={<Home />} />
+                        <Route path="/checkout" element={<Checkout />} />
+                        <Route path="/quiz" element={<Quiz />} />
+                    </Routes>
+                </BrowserRouter>
+            </Container>
         </React.Fragment>
     );
 }

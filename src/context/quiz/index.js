@@ -7,18 +7,25 @@
 // └──────────────────────────────────────────────────────────────────────────────────────────────┘
 
 import * as React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
 
-import { QuizContextProvider } from "./context/quiz";
+export const QuizContext = React.createContext();
 
-import "./theme/globalstyle.css";
+export function QuizContextProvider({ children }) {
+    const quizStore =
+        localStorage.getItem("quiz") ||
+        '{"amount":3, "category": "any", "checkout":false}';
 
-ReactDOM.render(
-    <React.StrictMode>
-        <QuizContextProvider>
-            <App />
-        </QuizContextProvider>
-    </React.StrictMode>,
-    document.getElementById("root")
-);
+    const [quiz, setQuiz] = React.useState(JSON.parse(quizStore));
+
+    React.useMemo(() => {
+        localStorage.setItem("quiz", JSON.stringify(quiz));
+    }, [quiz]);
+
+    return (
+        <QuizContext.Provider value={[quiz, setQuiz]}>
+            {children}
+        </QuizContext.Provider>
+    );
+}
+
+export default QuizContext;

@@ -5,20 +5,8 @@
 // │ For more information, read the LICENSE file at the root of the project.                      │
 // │ Written by author Rodney Sostras <rodney.sostras@gmail.com>.                                 │
 // └──────────────────────────────────────────────────────────────────────────────────────────────┘
+//
 
-import * as React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-
-import { QuizContextProvider } from "./context/quiz";
-
-import "./theme/globalstyle.css";
-
-ReactDOM.render(
-    <React.StrictMode>
-        <QuizContextProvider>
-            <App />
-        </QuizContextProvider>
-    </React.StrictMode>,
-    document.getElementById("root")
-);
+export default function Quiz() {
+    return <h2>QUiz</h2>;
+}
