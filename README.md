@@ -50,11 +50,11 @@ Uma prova realizada para Wa Project que deve respeitar os requisitos abaixos.
 
 ## 📦 Requisitos
 
-- [ ] Usuários pode escolhe quantidade de perguntas que deseja responder.
-- [ ] Uma página de checkout antes do teste.
+- [x] Usuários pode escolhe quantidade de perguntas que deseja responder.
+- [x] Uma página de checkout antes do teste.
     - Deve conter um botão de start para iniciar o teste.
     - Deve conter um botão de cancel para retorna a página de escolha de quantidade de perguntas.
-- [ ] Consumir a API de perguntas que foi disponibilizada.
+- [x] Consumir a API de perguntas que foi disponibilizada.
 - [ ] Página de relatorios.
     - Exibir a quantidade de acertos e erros.
     - Uma lista com as questões, com a resposta escolhida e a resposta certas.
