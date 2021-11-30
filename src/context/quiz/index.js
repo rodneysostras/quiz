@@ -13,7 +13,7 @@ export const QuizContext = React.createContext();
 export function QuizContextProvider({ children }) {
     const quizStore =
         localStorage.getItem("quiz") ||
-        '{"amount":3, "category": "any", "checkout":false}';
+        '{"amount":3, "category": 0, "checkout":false}';
 
     const [quiz, setQuiz] = React.useState(JSON.parse(quizStore));
 
