@@ -21,9 +21,10 @@ export default function Checkout() {
 
     async function handleStart() {
         setLoading(true);
-        opentdb.GetQuestions(quiz.amount).then((q) => {
-            setQuiz({ ...quiz, data: q });
+        opentdb.GetQuestions(quiz.amount, quiz.category).then((q) => {
+            setQuiz({ ...quiz, questions: q, current: 0 });
             setTimeout(() => setLoading(false), 2000);
+            setTimeout(() => navigate("/quiz"), 2100);
         });
     }
 
