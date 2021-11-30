@@ -13,7 +13,7 @@ const api_opentdb = axios.create({
 });
 
 export const mapCategory = {
-    any: "Any Category",
+    0: "Any Category",
     9: "General Knowledge",
     10: "Entertainment: Books",
     11: "Entertainment: Film",
@@ -49,10 +49,25 @@ export const opentdb = {
             api_opentdb
                 .request(options)
                 .then(({ data }) => {
-                    resolve({});
+                    if (data.response_code !== 0) {
+                        return reject({ error: data.response_code });
+                    }
+                    const shuffle = (arr) =>
+                        arr.sort(() => 0.5 - Math.random());
+
+                    const questions = data.results.map((item) => ({
+                        question: item.question,
+                        options: shuffle([
+                            ...item.incorrect_answers,
+                            item.correct_answer,
+                        ]),
+                        answer: item.correct_answer,
+                    }));
+
+                    resolve(questions);
                 })
                 .catch(({ response }) => {
-                    reject({});
+                    reject(response);
                 });
         });
     },
