@@ -7,11 +7,13 @@
 // └──────────────────────────────────────────────────────────────────────────────────────────────┘
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
-import { Box, Button, Typography, CircularProgress } from "@material-ui/core";
+import { Box, Button, CircularProgress } from "@material-ui/core";
 
 import useStyles from "./styled";
 import { QuizContext } from "../../context/quiz";
 import opentdb, { mapCategory } from "../../service/opentdb";
+
+import HeaderTitle from "../../components/header-title";
 
 export default function Checkout() {
     const [quiz, setQuiz] = React.useContext(QuizContext);
@@ -33,10 +35,8 @@ export default function Checkout() {
         navigate("/");
     }
     return (
-        <Box>
-            <Typography variant="h2" className={classes.title}>
-                Press start if you agree.
-            </Typography>
+        <React.Fragment>
+            <HeaderTitle title="Press start if you agree." />
             <Box className={classes.info}>
                 <p>
                     Number of questions: <b>{quiz.amount}</b>
@@ -62,6 +62,6 @@ export default function Checkout() {
                     {loading ? <CircularProgress size="24px" /> : "START"}
                 </Button>
             </Box>
-        </Box>
+        </React.Fragment>
     );
 }
