@@ -20,7 +20,7 @@ export function QuizSystemContextProvider({ children }) {
     );
 
     React.useMemo(() => {
-        localStorage.setItem("quiz", JSON.stringify(quizSystem));
+        localStorage.setItem("quiz-system", JSON.stringify(quizSystem));
     }, [quizSystem]);
 
     return (
