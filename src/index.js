@@ -9,16 +9,19 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import { QuizQuestionsContextProvider } from "./context/quiz-question";
 
-import { QuizContextProvider } from "./context/quiz";
+import { QuizSystemContextProvider } from "./context/quiz-system";
 
 import "./theme/globalstyle.css";
 
 ReactDOM.render(
     <React.StrictMode>
-        <QuizContextProvider>
-            <App />
-        </QuizContextProvider>
+        <QuizSystemContextProvider>
+            <QuizQuestionsContextProvider>
+                <App />
+            </QuizQuestionsContextProvider>
+        </QuizSystemContextProvider>
     </React.StrictMode>,
     document.getElementById("root")
 );
