@@ -23,7 +23,7 @@ import useStyles from "./styled";
 import QuizContext from "../../context/quiz";
 import { mapCategory } from "../../service/opentdb";
 
-import HeaderTitle from "../../components/header-title";
+import HeaderTitle from "../../components/title";
 import NumberSwitch from "../../components/number-switch";
 
 export default function Home() {

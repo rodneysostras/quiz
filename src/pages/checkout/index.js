@@ -13,7 +13,7 @@ import useStyles from "./styled";
 import { QuizContext } from "../../context/quiz";
 import opentdb, { mapCategory } from "../../service/opentdb";
 
-import HeaderTitle from "../../components/header-title";
+import HeaderTitle from "../../components/title";
 
 export default function Checkout() {
     const [quiz, setQuiz] = React.useContext(QuizContext);
