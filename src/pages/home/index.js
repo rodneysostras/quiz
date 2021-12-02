@@ -15,8 +15,6 @@ import {
     Collapse,
     FormControl,
     InputLabel,
-    TextField,
-    Typography,
     Select,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -24,6 +22,9 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import useStyles from "./styled";
 import QuizContext from "../../context/quiz";
 import { mapCategory } from "../../service/opentdb";
+
+import HeaderTitle from "../../components/header-title";
+import NumberSwitch from "../../components/number-switch";
 
 export default function Home() {
     const [quiz, setQuiz] = React.useContext(QuizContext);
@@ -42,11 +43,12 @@ export default function Home() {
 
             const amount = parseInt(values.amount);
 
-            if (amount <= 0) {
-                return { amount: "invalid negative value." };
+            if (amount < 1) {
+                return { amount: "less than 1, very small amount." };
             }
 
-            if (amount >= 50) return { amount: "very large amount." };
+            if (amount > 50)
+                return { amount: "greater than 50, very large amount." };
         },
         onSubmit: (values) => {
             setQuiz({
@@ -59,9 +61,7 @@ export default function Home() {
     });
 
     function handleAmountChange(value) {
-        const amount = parseInt(formik.values.amount) + value;
-
-        formik.setFieldValue("amount", amount >= 0 ? amount : 1);
+        formik.setFieldValue("amount", value);
     }
 
     function handleCategoryChange(value) {
@@ -69,59 +69,18 @@ export default function Home() {
     }
 
     return (
-        <Box>
-            <Typography variant="h2" className={classes.title}>
-                Choose number of questions.
-            </Typography>
+        <React.Fragment>
+            <HeaderTitle title="Choose number of questions." />
             <form onSubmit={formik.handleSubmit}>
-                <Box className={classes.amountGroup}>
-                    <Button
-                        className={classes.buttonNegative}
-                        onClick={(e) => handleAmountChange(-5)}
-                    >
-                        -5
-                    </Button>
-                    <Button
-                        className={classes.buttonNegative}
-                        onClick={(e) => handleAmountChange(-1)}
-                    >
-                        -1
-                    </Button>
-                    <TextField
-                        id="amount"
-                        name="amount"
-                        type="number"
-                        value={formik.values.amount}
-                        onChange={formik.handleAmountChange}
-                        variant="outlined"
-                        inputProps={{
-                            style: {
-                                textAlign: "center",
-                                padding: "18.5px 4px",
-                            },
-                        }}
-                        InputProps={{
-                            inputMode: "numeric",
-                            classes: {
-                                root: classes.cssOutlinedInput,
-                                focused: classes.cssFocused,
-                                notchedOutline: classes.notchedOutline,
-                            },
-                        }}
-                    />
-                    <Button
-                        className={classes.buttonPositive}
-                        onClick={(e) => handleAmountChange(1)}
-                    >
-                        +1
-                    </Button>
-                    <Button
-                        className={classes.buttonPositive}
-                        onClick={(e) => handleAmountChange(5)}
-                    >
-                        +5
-                    </Button>
-                </Box>
+                <NumberSwitch
+                    id="amount"
+                    name="amount"
+                    min="0"
+                    max="99"
+                    start="3"
+                    handle={handleAmountChange}
+                    valueOf={[1, 5]}
+                />
                 <Box>
                     <Button
                         className={classes.advance}
@@ -176,6 +135,6 @@ export default function Home() {
                     ) : null}
                 </Box>
             </form>
-        </Box>
+        </React.Fragment>
     );
 }

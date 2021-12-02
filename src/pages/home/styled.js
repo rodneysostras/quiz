@@ -9,55 +9,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles(() => ({
-    title: {
-        width: "100%",
-        fontSize: "24px",
-        fontWeight: 400,
-        textAlign: "center",
-    },
-    amountGroup: {
-        display: "flex",
-        justifyContent: "Center",
-        maxWidth: "320px",
-        margin: "25px auto",
-        border: "1px solid #0000003b",
-        borderRadius: "15px",
-        overflow: "hidden",
-    },
-    buttonNegative: {
-        fontSize: "1.3rem",
-        color: "#fff",
-        background: "red",
-        borderRadius: 0,
-        border: 0,
-        "&:hover": {
-            color: "red",
-        },
-    },
-    buttonPositive: {
-        fontSize: "1.3rem",
-        color: "#fff",
-        background: "green",
-        borderRadius: 0,
-        border: 0,
-        "&:hover": {
-            color: "green",
-        },
-    },
-    cssInput: {
-        textAlign: "center",
-        width: "64px",
-        fontSize: "24px",
-    },
-    cssFocused: {},
-    notchedOutline: {
-        borderWidth: "0",
-    },
-    cssOutlinedInput: {
-        "&$cssFocused $notchedOutline": {
-            borderWidth: "0",
-        },
-    },
     error: {
         height: "20px",
         fontWeight: 500,
