@@ -10,28 +10,30 @@ import { useNavigate } from "react-router-dom";
 import { Box, Button, CircularProgress } from "@material-ui/core";
 
 import useStyles from "./styled";
-import { QuizContext } from "../../context/quiz";
+import { QuizSystemContext } from "../../context/quiz-system";
 import opentdb, { mapCategory } from "../../service/opentdb";
 
 import HeaderTitle from "../../components/title";
 
 export default function Checkout() {
-    const [quiz, setQuiz] = React.useContext(QuizContext);
+    const [quizSystem, setQuizSystem] = React.useContext(QuizSystemContext);
     const [loading, setLoading] = React.useState(false);
     let navigate = useNavigate();
     const classes = useStyles();
 
     async function handleStart() {
         setLoading(true);
-        opentdb.GetQuestions(quiz.amount, quiz.category).then((q) => {
-            setQuiz({ ...quiz, questions: q, current: 0 });
-            setTimeout(() => setLoading(false), 2000);
-            setTimeout(() => navigate("/quiz"), 2100);
-        });
+        opentdb
+            .GetQuestions(quizSystem.amount, quizSystem.category)
+            .then((q) => {
+                setQuizSystem({ ...quizSystem, questions: q, current: 0 });
+                setTimeout(() => setLoading(false), 2000);
+                setTimeout(() => navigate("/quiz"), 2100);
+            });
     }
 
     function handleCancel() {
-        setQuiz({ ...quiz, checkout: false });
+        setQuizSystem({ ...quizSystem, checkout: false });
         navigate("/");
     }
     return (
@@ -39,10 +41,10 @@ export default function Checkout() {
             <HeaderTitle title="Press start if you agree." />
             <Box className={classes.info}>
                 <p>
-                    Number of questions: <b>{quiz.amount}</b>
+                    Number of questions: <b>{quizSystem.amount}</b>
                 </p>
                 <p>
-                    Selected category: <b>{mapCategory[quiz.category]}</b>
+                    Selected category: <b>{mapCategory[quizSystem.category]}</b>
                 </p>
             </Box>
             <Box className={classes.action}>

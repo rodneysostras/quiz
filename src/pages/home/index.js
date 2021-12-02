@@ -20,21 +20,21 @@ import {
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import useStyles from "./styled";
-import QuizContext from "../../context/quiz";
+import QuizSystemContext from "../../context/quiz-system";
 import { mapCategory } from "../../service/opentdb";
 
 import HeaderTitle from "../../components/title";
 import NumberSwitch from "../../components/number-switch";
 
 export default function Home() {
-    const [quiz, setQuiz] = React.useContext(QuizContext);
+    const [quizSystem, setQuizSystem] = React.useContext(QuizSystemContext);
     const [advance, setAdvance] = React.useState(false);
     const navigate = useNavigate();
     const classes = useStyles();
     const formik = useFormik({
         initialValues: {
-            amount: quiz.amount,
-            category: quiz.category,
+            amount: quizSystem.amount,
+            category: quizSystem.category,
         },
         validate: (values) => {
             if (values.amount === "") {
@@ -51,7 +51,7 @@ export default function Home() {
                 return { amount: "greater than 50, very large amount." };
         },
         onSubmit: (values) => {
-            setQuiz({
+            setQuizSystem({
                 amount: values.amount,
                 category: values.category,
                 checkout: true,
