@@ -75,9 +75,9 @@ export default function Home() {
                 <NumberSwitch
                     id="amount"
                     name="amount"
-                    min="0"
-                    max="99"
-                    start="3"
+                    min={0}
+                    max={99}
+                    start={quizSystem.amount}
                     handle={handleAmountChange}
                     valueOf={[1, 5]}
                 />
