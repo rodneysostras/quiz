@@ -13,7 +13,7 @@ import {Box, Button, TextField} from "@material-ui/core";
 import useStyles from "./styled";
 
 export default function NumberSwitch({valueOf, max, min, handle, start = 0, ...props}) {
-    const [count, setCount] = React.useState(start);
+    const [count, setCount] = React.useState(parseInt(start));
     const classes = useStyles();
 
     max = parseInt(max);
