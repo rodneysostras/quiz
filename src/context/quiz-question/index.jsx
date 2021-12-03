@@ -13,7 +13,7 @@ export const QuizQuestionsContext = React.createContext();
 export function QuizQuestionsContextProvider({ children }) {
     const quizQuestionsStore =
         localStorage.getItem("quiz-questions") ||
-        '{"current":0, "questions": []}';
+        '{"timestamp": 0, "current":0, "score": 0, "questions": []}';
 
     const [quizQuestions, setQuizQuestions] = React.useState(
         JSON.parse(quizQuestionsStore)
