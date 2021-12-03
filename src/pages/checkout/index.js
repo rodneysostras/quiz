@@ -10,13 +10,17 @@ import { useNavigate } from "react-router-dom";
 import { Box, Button, CircularProgress } from "@material-ui/core";
 
 import useStyles from "./styled";
+
 import { QuizSystemContext } from "../../context/quiz-system";
+import { QuizQuestionsContext } from "../../context/quiz-question";
+
 import opentdb, { mapCategory } from "../../service/opentdb";
 
 import HeaderTitle from "../../components/title";
 
 export default function Checkout() {
     const [quizSystem, setQuizSystem] = React.useContext(QuizSystemContext);
+    const [_, setQuizQuestions] = React.useContext(QuizQuestionsContext);
     const [loading, setLoading] = React.useState(false);
     let navigate = useNavigate();
     const classes = useStyles();
@@ -26,7 +30,12 @@ export default function Checkout() {
         opentdb
             .GetQuestions(quizSystem.amount, quizSystem.category)
             .then((q) => {
-                setQuizSystem({ ...quizSystem, questions: q, current: 0 });
+                setQuizQuestions({
+                    timestamp: new Date().getTime(),
+                    score: 0,
+                    current: 0,
+                    questions: q,
+                });
                 setTimeout(() => setLoading(false), 2000);
                 setTimeout(() => navigate("/quiz"), 2100);
             });
