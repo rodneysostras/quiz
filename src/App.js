@@ -30,7 +30,7 @@ export default function App() {
                 >
                     QUIZ
                 </Typography>
-                <Divider style={{ marginBottom: "1rem" }} />
+                <Divider />
                 <Box padding="10px">
                     <BrowserRouter>
                         <Routes>
