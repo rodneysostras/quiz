@@ -9,20 +9,19 @@ import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Button, CircularProgress } from "@material-ui/core";
 
+import { QuizSystemContext } from "../../context/quiz-system";
+import { QuizQuestionsContext } from "../../context/quiz-questions";
+import HeaderTitle from "../../components/title";
+
 import useStyles from "./styled";
 
-import { QuizSystemContext } from "../../context/quiz-system";
-import { QuizQuestionsContext } from "../../context/quiz-question";
-
 import opentdb, { mapCategory } from "../../service/opentdb";
-
-import HeaderTitle from "../../components/title";
 
 export default function Checkout() {
     const [quizSystem, setQuizSystem] = React.useContext(QuizSystemContext);
     const [_, setQuizQuestions] = React.useContext(QuizQuestionsContext);
     const [loading, setLoading] = React.useState(false);
-    let navigate = useNavigate();
+    const navigate = useNavigate();
     const classes = useStyles();
 
     async function handleStart() {
@@ -31,12 +30,11 @@ export default function Checkout() {
             .GetQuestions(quizSystem.amount, quizSystem.category)
             .then((q) => {
                 setQuizQuestions({
-                    timestamp: new Date().getTime(),
+                    start_at: new Date().getTime(),
                     score: 0,
                     current: 0,
                     questions: q,
                 });
-                setTimeout(() => setLoading(false), 2000);
                 setTimeout(() => navigate("/quiz"), 2100);
             });
     }
@@ -47,7 +45,7 @@ export default function Checkout() {
     }
     return (
         <React.Fragment>
-            <HeaderTitle title="Press start if you agree." />
+            <HeaderTitle text="Press start if you agree." />
             <Box className={classes.info}>
                 <p>
                     Number of questions: <b>{quizSystem.amount}</b>

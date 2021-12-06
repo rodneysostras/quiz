@@ -70,7 +70,7 @@ export default function Home() {
 
     return (
         <React.Fragment>
-            <HeaderTitle title="Choose number of questions." />
+            <HeaderTitle text="Choose number of questions." />
             <form onSubmit={formik.handleSubmit}>
                 <NumberSwitch
                     id="amount"
