@@ -10,12 +10,12 @@ import { Typography } from "@material-ui/core";
 import * as React from "react";
 import useStyles from "./styled";
 
-export default function QuestionTitle({ index, title }) {
+export default function QuestionTitle({ index, text }) {
     const classes = useStyles();
     return (
         <Typography variant="h6" className={classes.title}>
             <span>{index} - </span>
-            <b dangerouslySetInnerHTML={{ __html: title }} />
+            <b dangerouslySetInnerHTML={{ __html: text }} />
         </Typography>
     );
 }
