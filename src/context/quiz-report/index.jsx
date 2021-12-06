@@ -7,24 +7,27 @@
 // └──────────────────────────────────────────────────────────────────────────────────────────────┘
 
 import * as React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
 
-import { QuizSystemContextProvider } from "./context/quiz-system";
-import { QuizReportContextProvider } from "./context/quiz-report";
-import { QuizQuestionsContextProvider } from "./context/quiz-questions";
+export const QuizReportContext = React.createContext();
 
-import "./theme/globalstyle.css";
+export function QuizReportContextProvider({ children }) {
+    const quizReportStore =
+        localStorage.getItem("quiz-report") ||
+        '[]';
 
-ReactDOM.render(
-    <React.StrictMode>
-        <QuizSystemContextProvider>
-            <QuizReportContextProvider>
-                <QuizQuestionsContextProvider>
-                    <App />
-                </QuizQuestionsContextProvider>
-            </QuizReportContextProvider>
-        </QuizSystemContextProvider>
-    </React.StrictMode>,
-    document.getElementById("root")
-);
+    const [quizReport, setQuizReport] = React.useState(
+        JSON.parse(quizReportStore)
+    );
+
+    React.useMemo(() => {
+        localStorage.setItem("quiz-report", JSON.stringify(quizReport));
+    }, [quizReport]);
+
+    return (
+        <QuizReportContext.Provider value={[quizReport, setQuizReport]}>
+            {children}
+        </QuizReportContext.Provider>
+    );
+}
+
+export default QuizReportContext;

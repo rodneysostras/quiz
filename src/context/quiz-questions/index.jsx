@@ -7,24 +7,27 @@
 // └──────────────────────────────────────────────────────────────────────────────────────────────┘
 
 import * as React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
 
-import { QuizSystemContextProvider } from "./context/quiz-system";
-import { QuizReportContextProvider } from "./context/quiz-report";
-import { QuizQuestionsContextProvider } from "./context/quiz-questions";
+export const QuizQuestionsContext = React.createContext();
 
-import "./theme/globalstyle.css";
+export function QuizQuestionsContextProvider({ children }) {
+    const quizQuestionsStore =
+        localStorage.getItem("quiz-questions") ||
+        '{"timestamp": 0, "current":0, "score": 0, "questions": []}';
 
-ReactDOM.render(
-    <React.StrictMode>
-        <QuizSystemContextProvider>
-            <QuizReportContextProvider>
-                <QuizQuestionsContextProvider>
-                    <App />
-                </QuizQuestionsContextProvider>
-            </QuizReportContextProvider>
-        </QuizSystemContextProvider>
-    </React.StrictMode>,
-    document.getElementById("root")
-);
+    const [quizQuestions, setQuizQuestions] = React.useState(
+        JSON.parse(quizQuestionsStore)
+    );
+
+    React.useMemo(() => {
+        localStorage.setItem("quiz-questions", JSON.stringify(quizQuestions));
+    }, [quizQuestions]);
+
+    return (
+        <QuizQuestionsContext.Provider value={[quizQuestions, setQuizQuestions]}>
+            {children}
+        </QuizQuestionsContext.Provider>
+    );
+}
+
+export default QuizQuestionsContext;
