@@ -36,6 +36,7 @@
 <p align="center">
     <a href="#-sobre-o-projeto">Sobre</a> •
     <a href="#-requisitos">Requisitos</a> •
+    <a href="#-recursos">Recursos</a> •
     <a href="#-como-executar-o-projeto">Como executar</a> •
     <a href="#-tecnologias">Tecnologias</a> •
     <a href="#-autor">Autor</a> • 
@@ -52,13 +53,19 @@ Uma prova realizada para Wa Project que deve respeitar os requisitos abaixos.
 
 - [x] Usuários pode escolhe quantidade de perguntas que deseja responder.
 - [x] Uma página de checkout antes do teste.
-    - Deve conter um botão de start para iniciar o teste.
-    - Deve conter um botão de cancel para retorna a página de escolha de quantidade de perguntas.
-- [x] Consumir a API de perguntas que foi disponibilizada.
+    - [x] Deve conter um botão de start para realizar requisição API e iniciar o teste.
+    - [x] Deve conter um botão de cancel para retorna a página de escolha de quantidade de perguntas.
+- [ ] Realização do quiz.
+    - [ ] Apresentar cada pergunta e suas opções de resposta.
+    - [ ] Contabilizar acertos e erros.
+- [ ] Termino do quiz (relatório).
+    - [ ] Mostrar quantidade de acerto e erros.
+    - [ ] Uma lista das questões destacando a que foi acerto e errado.
+    - [ ] Na lista mostrar a resposta escolhida e a correta.
+    - [ ] Salva o relatório no localStorage.
 - [ ] Página de relatorios.
-    - Exibir a quantidade de acertos e erros.
-    - Uma lista com as questões, com a resposta escolhida e a resposta certas.
-- [ ] Salvar os relatórios em localStorage e exibir na página inicial caso possua algum salvo.
+    - [ ] Na página inicial mostrar os questionários salvos no localStorage.
+    - [ ] Rever o relatório salvo.
 
 <br />
 
@@ -80,6 +87,14 @@ Você será bem avaliado se usar Context API, Axio, Hooks, Formik, testes de com
 Lembrando que prazo dado para nós é prazo cumprido e vamos prezar por aqueles candidatos que entregarem o projeto no prazo que pediu e com a coerência da tarefa (sabemos que vocês trabalham em outros locais e/ou estudam, isso será levado em consideração, não se preocupe).
 
 </blockquote>
+
+## ⚙️ Recursos
+
+- [ ] Opções para personalizar o quiz.
+    - Categoria.
+    - Dificuldade.
+    - Tipos de respostas.
+- [ ] Salva a personalização do usuário para próximo uso.
 
 ## 🚀 Como executar o projeto
 
