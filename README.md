@@ -49,7 +49,7 @@
 
 Uma prova realizada para Wa Project que deve respeitar os requisitos abaixos.
 
-## 📦 Requisitos
+## 🎯 Requisitos
 
 - [x] Usuários pode escolhe quantidade de perguntas que deseja responder.
 - [x] Uma página de checkout antes do teste.
@@ -88,13 +88,15 @@ Lembrando que prazo dado para nós é prazo cumprido e vamos prezar por aqueles 
 
 </blockquote>
 
-## ⚙️ Recursos
+## 📦 Recursos
 
 - [ ] Opções para personalizar o quiz.
-    - Categoria.
-    - Dificuldade.
-    - Tipos de respostas.
-- [ ] Salva a personalização do usuário para próximo uso.
+    - [x] Categoria.
+    - [ ] Dificuldade.
+    - [ ] Tipos de respostas.
+- [x] Salva a personalização do usuário para próximo uso.
+- [ ] Dark theme.
+- [ ] Página 'not found'.
 
 ## 🚀 Como executar o projeto
 
