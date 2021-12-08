@@ -18,17 +18,23 @@ import {
     Select,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { Pagination } from '@material-ui/lab';
 
-import useStyles from "./styled";
 import QuizSystemContext from "../../context/quiz-system";
-import { mapCategory } from "../../service/opentdb";
+import QuizReportContext from "../../context/quiz-report";
 
 import HeaderTitle from "../../components/title";
 import NumberSwitch from "../../components/number-switch";
 
+import { mapCategory } from "../../service/opentdb";
+
+import useStyles from "./styled";
+
 export default function Home() {
+    const [quizReport] = React.useContext(QuizReportContext);
     const [quizSystem, setQuizSystem] = React.useContext(QuizSystemContext);
     const [advance, setAdvance] = React.useState(false);
+    const [listReport, setListReport] = React.useState(1);
     const navigate = useNavigate();
     const classes = useStyles();
     const formik = useFormik({
@@ -59,6 +65,10 @@ export default function Home() {
             navigate("/checkout");
         },
     });
+
+    function handleListReport(_, value) {
+        setListReport(value)
+    }
 
     function handleAmountChange(value) {
         formik.setFieldValue("amount", value);
@@ -135,6 +145,27 @@ export default function Home() {
                     ) : null}
                 </Box>
             </form>
+            { quizReport.length > 0 && (
+                <Box className={classes.reportBox}>
+                    <h3 align="center">Last quiz</h3>
+                    <ul>
+                        {quizReport.slice((listReport - 1) * 4, listReport * 4).map((item, idx) => (
+                            <li>
+                                <div>
+                                    {new Date(item.end_at).toLocaleString("en")}
+                                </div>
+                                <div>
+                                    <span>{`${item.score}/${item.questions.length} score`}</span>
+                                    <Button onClick={() => navigate('/report/' + idx)}>→</Button>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                    <Box className={classes.paginationBox}>
+                        <Pagination count={Math.ceil(quizReport.length / 4)} onChange={handleListReport} variant="outlined" shape="rounded"/>
+                    </Box>
+                </Box>
+            )}
         </React.Fragment>
     );
 }

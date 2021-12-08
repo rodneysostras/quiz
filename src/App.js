@@ -8,11 +8,14 @@
 
 import * as React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Box, Container, Divider, Typography } from "@material-ui/core";
+
 import Home from "./pages/home";
 import Quiz from "./pages/quiz";
 import Checkout from "./pages/checkout";
+import Report from "./pages/report";
 
 export default function App() {
     return (
@@ -37,6 +40,7 @@ export default function App() {
                             <Route exact path="/" element={<Home />} />
                             <Route path="/checkout" element={<Checkout />} />
                             <Route path="/quiz" element={<Quiz />} />
+                            <Route path="/report/:id" element={<Report />} />
                         </Routes>
                     </BrowserRouter>
                 </Box>

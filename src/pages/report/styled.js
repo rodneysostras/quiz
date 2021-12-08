@@ -9,55 +9,29 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles(() => ({
+    divider: {
+        width: "70%",
+        margin: "1.563rem auto",
+    },
     error: {
-        height: "20px",
-        fontWeight: 500,
-        color: "red",
-        textTransform: "uppercase",
-    },
-    iconExpand: {
-        transform: "rotate(0deg)",
-        transition: "fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-    },
-    advance: {
-        fontSize: "0.625rem",
-        fontWeight: "400",
-        color: "#424242",
-        '&[aria-expanded="true"] $iconExpand': {
-            transform: "rotate(180deg)",
-        },
-    },
-    formControl: {
-        minWidth: 120,
-    },
-    buttonNext: {
-        width: "150px",
-        margin: "15px auto",
-    },
-    reportBox: {
-        "& > ul": {
-            listStyle: "none",
-            borderRadius: "15px",
-            overflow: "hidden",
-            "& > li": {
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                padding: "3px",
-                paddingLeft: "15px",
-                backgroundColor: "#fff",
-                fontSize: "0.75rem",
-                cursor: "pointer",
-                "&:nth-child(2n-1)": {
-                    backgroundColor: "#0000001f",
-                },
-            },
-        },
-    },
-    paginationBox: {
         display: "flex",
         justifyContent: "center",
-        padding: "10px",
+        textAlign: "center",
+        fontSize: "3rem",
+        marginBottom: "1rem",
+        "& > p": {
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+        },
+    },
+    action: {
+        width: "60%",
+        margin: "0 auto",
+        marginBottom: "1rem",
+        "& > button": {
+            marginLeft: "100%",
+        },
     },
 }));
 
