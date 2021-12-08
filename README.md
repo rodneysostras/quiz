@@ -5,9 +5,9 @@
 # 📃 Quiz
 
 <div align="center">
-    <img src="https://img.shields.io/badge/%F0%9F%9A%A7%20EM%20CONTRU%C3%87%C3%83O%20-10%25-brightgreen?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/%F0%9F%9A%A7%20EM%20CONTRU%C3%87%C3%83O%20-90%25-brightgreen?style=for-the-badge" />
     <img src="https://shields.io/github/deployments/rodneysostras/quiz/production?style=for-the-badge&logo=appveyor" />
-    <img src="https://img.shields.io/website-up-down-green-red/https/quiz?style=for-the-badge"/>
+    <img src="https://img.shields.io/website-up-down-green-red/https/quiz.rodneysostras.me?style=for-the-badge"/>
     <img src="https://img.shields.io/github/repo-size/rodneysostras/quiz?style=for-the-badge"/>
     <img src="https://img.shields.io/github/languages/count/rodneysostras/quiz?style=for-the-badge"/>
     <img src="https://img.shields.io/bitbucket/issues/rodneysostras/quiz?style=for-the-badge"/>
@@ -16,7 +16,7 @@
 
 <br />
 
-<div align="center"><a href="https://rodneysostras.me/quiz"><b>DEMO - https://quiz.rodneysostras.me/</b></a></div>
+<div align="center"><a href="https://quiz.rodneysostras.me/"><b>DEMO - https://quiz.rodneysostras.me/</b></a></div>
 
 <br />
 
@@ -55,17 +55,17 @@ Uma prova realizada para Wa Project que deve respeitar os requisitos abaixos.
 - [x] Uma página de checkout antes do teste.
     - [x] Deve conter um botão de start para realizar requisição API e iniciar o teste.
     - [x] Deve conter um botão de cancel para retorna a página de escolha de quantidade de perguntas.
-- [ ] Realização do quiz.
-    - [ ] Apresentar cada pergunta e suas opções de resposta.
-    - [ ] Contabilizar acertos e erros.
-- [ ] Termino do quiz (relatório).
-    - [ ] Mostrar quantidade de acerto e erros.
-    - [ ] Uma lista das questões destacando a que foi certo e errado.
-    - [ ] Na lista mostrar a resposta escolhida e a correta.
-    - [ ] Salva o relatório no localStorage.
-- [ ] Página de relatórios.
-    - [ ] Na página inicial mostrar os questionários salvos no localStorage.
-    - [ ] Rever o relatório salvo.
+- [x] Realização do quiz.
+    - [x] Apresentar cada pergunta e suas opções de resposta.
+    - [x] Contabilizar acertos e erros.
+- [x] Termino do quiz (relatório).
+    - [x] Mostrar quantidade de acerto e erros.
+    - [x] Uma lista das questões destacando a que foi certo e errado.
+    - [x] Na lista mostrar a resposta escolhida e a correta.
+    - [x] Salva o relatório no localStorage.
+- [x] Página de relatórios.
+    - [x] Na página inicial mostrar os questionários salvos no localStorage.
+    - [x] Rever o relatório salvo.
 
 <br />
 
@@ -102,9 +102,9 @@ Lembrando que prazo dado para nós é prazo cumprido e vamos prezar por aqueles 
 
 ```bash
 # Clone este repositório
-$ git clone git@github.com:rodneysostras/test-waproject-01.git
+$ git clone git@github.com:rodneysostras/quiz.git
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd test-waproject-01
+$ cd quiz
 # Instale as dependências
 $ npm install
 # Execute a aplicação em modo de desenvolvimento
@@ -116,9 +116,12 @@ $ npm run start
 ## 🛠 Tecnologias
 
 -   **[React](https://reactjs.org/)** • Framework Javascript open source utilizado para criar interfaces de usuário em paginas web.
+-   **[React router dom](https://v5.reactrouter.com/)** • Um componente que possibilita navegação entre componente gerando um roteamento de url.
 -   **[Axios](https://github.com/axios/axios)** • Cliente HTTP leve semelhante à API Fetch nativa do JavaScript.
+-   **[Material-UI](https://v4.mui.com/)** • Biblioteca de componentes React para construir UI (User Interface).
+-   **[Formik](https://formik.org/)** • Componente para facilitar contrução de formulários.
 
-> Veja o arquivo  [package.json](https://github.com/rodneysostras/test-waproject-01/blob/main/package.json)
+> Veja o arquivo  [package.json](https://github.com/rodneysostras/quiz/blob/main/package.json)
 ## 🦸 Autor
 
 <table align="left">
