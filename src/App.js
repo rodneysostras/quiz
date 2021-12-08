@@ -16,6 +16,7 @@ import Home from "./pages/home";
 import Quiz from "./pages/quiz";
 import Checkout from "./pages/checkout";
 import Report from "./pages/report";
+import NotFound from "./pages/notfound";
 
 export default function App() {
     return (
@@ -41,6 +42,7 @@ export default function App() {
                             <Route path="/checkout" element={<Checkout />} />
                             <Route path="/quiz" element={<Quiz />} />
                             <Route path="/report/:id" element={<Report />} />
+                            <Route path="*" element={<NotFound />} />
                         </Routes>
                     </BrowserRouter>
                 </Box>
