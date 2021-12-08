@@ -16,6 +16,7 @@ import QuizReportContext from "../../context/quiz-report";
 
 import QuestionTitle from "../../components/question-title";
 import QuestionOption from "../../components/question-option";
+import QuestionInfo from "../../components/question-info";
 import HeaderTitle from "../../components/title";
 
 import useStyles from "./styled";
@@ -107,37 +108,20 @@ export default function Quiz() {
         </React.Fragment>
     ) : (
         <React.Fragment>
-            <Box className={classes.infoBox}>
-                <span>{`${
-                    quizReport[0].percentage < 50
-                        ? "☹️"
-                        : quizReport[0].percentage < 85
-                        ? "😕"
-                        : "🙂"
-                }`}</span>
-                <div>
-                    <p>
-                        {`${new Date(quizReport[0].end_at).toLocaleString(
-                            "en"
-                        )}`}
-                    </p>
-                    <p>
-                        <b>Hits: </b>
-                        {`${quizReport[0].score}/${quizReport[0].questions.length} (${quizReport[0].percentage}%)`}
-                    </p>
-                    <p>
-                        <b>Testing time: </b>
-                        {`${
-                            new Date(
-                                quizReport[0].end_at - quizReport[0].start_at
-                            )
-                                .toISOString()
-                                .split("T")[1]
-                                .split(".")[0]
-                        }`}
-                    </p>
-                </div>
-            </Box>
+            <QuestionInfo
+                date={quizReport[0].end_at}
+                cost={
+                    new Date(quizReport[0].end_at - quizReport[0].start_at)
+                        .toISOString()
+                        .split("T")[1]
+                        .split(".")[0]
+                }
+                score={quizReport[0].score}
+                total={quizReport[0].questions.length}
+                percentage={parseInt(
+                    (quizReport[0].score / quizReport[0].questions.length) * 100
+                )}
+            />
             <HeaderTitle text="Click on the question to verify" />
             <ul className={classes.listBox}>
                 {quizReport[0].questions.map((item, idx) => (
