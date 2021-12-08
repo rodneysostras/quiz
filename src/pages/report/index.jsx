@@ -9,7 +9,7 @@
 import * as React from 'react';
 import {  useNavigate, useParams } from "react-router-dom";
 
-import { Divider } from '@material-ui/core';
+import { Box, Button, Divider } from '@material-ui/core';
 
 import QuizReportContext from "../../context/quiz-report";
 
@@ -58,6 +58,15 @@ export default function Report() {
                     <Divider className={classes.divider}/>
                  </React.Fragment>
                 ))}
+                <Box className={classes.action}>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => navigate("/")}
+                    >
+                        HOME
+                    </Button>
+                </Box>
             </React.Fragment>
             ) : (
               <NotFound />
