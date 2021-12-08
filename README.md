@@ -6,17 +6,17 @@
 
 <div align="center">
     <img src="https://img.shields.io/badge/%F0%9F%9A%A7%20EM%20CONTRU%C3%87%C3%83O%20-10%25-brightgreen?style=for-the-badge" />
-    <img src="https://shields.io/github/deployments/rodneysostras/test-waproject-01/production?style=for-the-badge&logo=appveyor" />
-    <img src="https://img.shields.io/website-up-down-green-red/https/test-waproject-01?style=for-the-badge"/>
-    <img src="https://img.shields.io/github/repo-size/rodneysostras/test-waproject-01?style=for-the-badge"/>
-    <img src="https://img.shields.io/github/languages/count/rodneysostras/test-waproject-01?style=for-the-badge"/>
-    <img src="https://img.shields.io/bitbucket/issues/rodneysostras/test-waproject-01?style=for-the-badge"/>
-    <img src="https://img.shields.io/github/license/rodneysostras/test-waproject-01?style=for-the-badge"/>
+    <img src="https://shields.io/github/deployments/rodneysostras/quiz/production?style=for-the-badge&logo=appveyor" />
+    <img src="https://img.shields.io/website-up-down-green-red/https/quiz?style=for-the-badge"/>
+    <img src="https://img.shields.io/github/repo-size/rodneysostras/quiz?style=for-the-badge"/>
+    <img src="https://img.shields.io/github/languages/count/rodneysostras/quiz?style=for-the-badge"/>
+    <img src="https://img.shields.io/bitbucket/issues/rodneysostras/quiz?style=for-the-badge"/>
+    <img src="https://img.shields.io/github/license/rodneysostras/quiz?style=for-the-badge"/>
 </div>
 
 <br />
 
-<div align="center"><a href="https://rodneysostras.me/quiz"><b>DEMO - https://rodneysostras.me/quiz/</b></a></div>
+<div align="center"><a href="https://rodneysostras.me/quiz"><b>DEMO - https://quiz.rodneysostras.me/</b></a></div>
 
 <br />
 
