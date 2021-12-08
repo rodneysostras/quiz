@@ -96,7 +96,7 @@ Lembrando que prazo dado para nós é prazo cumprido e vamos prezar por aqueles 
     - [ ] Tipos de respostas.
 - [x] Salva a personalização do usuário para próximo uso.
 - [ ] Dark theme.
-- [ ] Página 'not found'.
+- [x] Página 'not found'.
 
 ## 🚀 Como executar o projeto
 
