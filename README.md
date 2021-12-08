@@ -60,10 +60,10 @@ Uma prova realizada para Wa Project que deve respeitar os requisitos abaixos.
     - [ ] Contabilizar acertos e erros.
 - [ ] Termino do quiz (relatório).
     - [ ] Mostrar quantidade de acerto e erros.
-    - [ ] Uma lista das questões destacando a que foi acerto e errado.
+    - [ ] Uma lista das questões destacando a que foi certo e errado.
     - [ ] Na lista mostrar a resposta escolhida e a correta.
     - [ ] Salva o relatório no localStorage.
-- [ ] Página de relatorios.
+- [ ] Página de relatórios.
     - [ ] Na página inicial mostrar os questionários salvos no localStorage.
     - [ ] Rever o relatório salvo.
 
