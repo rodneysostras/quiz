@@ -19,6 +19,7 @@ import opentdb, { mapCategory } from "../../service/opentdb";
 
 export default function Checkout() {
     const [quizSystem, setQuizSystem] = React.useContext(QuizSystemContext);
+    // eslint-disable-next-line 
     const [_, setQuizQuestions] = React.useContext(QuizQuestionsContext);
     const [loading, setLoading] = React.useState(false);
     const navigate = useNavigate();
