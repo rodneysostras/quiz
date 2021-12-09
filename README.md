@@ -97,6 +97,9 @@ Lembrando que prazo dado para nós é prazo cumprido e vamos prezar por aqueles 
 - [x] Salva a personalização do usuário para próximo uso.
 - [ ] Dark theme.
 - [x] Página 'not found'.
+- [x] SEO.
+- [x] Github Page - SPA routing.
+- [x] Responsivo.
 
 ## 🚀 Como executar o projeto
 
