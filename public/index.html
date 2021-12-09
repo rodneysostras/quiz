@@ -2,7 +2,6 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8" />
-        <base href="%PUBLIC_URL%/" />
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
         <meta
             name="viewport"
@@ -88,8 +87,8 @@
     --></head>
     <script type="text/javascript">
         (function (l) {
-            window.history.replaceState(null, null, l.replace(/\?\//g, ""));
-        })(windows.location);
+            window.history.replaceState(null, null, l.href.replace(/\?\//g, ""));
+        }(window.location));
     </script>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
