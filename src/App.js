@@ -22,20 +22,26 @@ export default function App() {
     return (
         <React.Fragment>
             <CssBaseline />
-            <Container maxWidth="sm" style={{ marginTop: "2rem" }}>
-                <Typography
-                    variant="h1"
-                    align="center"
-                    style={{
-                        width: "100%",
-                        fontFamily: "'Fascinate Inline', cursive",
-                        fontSize: "64px",
-                    }}
-                >
-                    QUIZ
-                </Typography>
+            <Container
+                maxWidth="sm"
+                style={{ margin: "2rem 0" }}
+                component="main"
+            >
+                <Box component="header">
+                    <Typography
+                        variant="h1"
+                        align="center"
+                        style={{
+                            width: "100%",
+                            fontFamily: "'Fascinate Inline', cursive",
+                            fontSize: "64px",
+                        }}
+                    >
+                        QUIZ
+                    </Typography>
+                </Box>
                 <Divider />
-                <Box padding="10px">
+                <Box padding="10px" component="article">
                     <BrowserRouter>
                         <Routes>
                             <Route exact path="/" element={<Home />} />

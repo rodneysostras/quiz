@@ -146,8 +146,8 @@ export default function Home() {
                 </Box>
             </form>
             { quizReport.length > 0 && (
-                <Box className={classes.reportBox}>
-                    <h3 align="center">Last quiz</h3>
+                <Box className={classes.reportBox} component="section">
+                    <h3>Last quiz</h3>
                     <ul>
                         {quizReport.slice((listReport - 1) * 4, listReport * 4).map((item, idx) => (
                             <li onClick={() => navigate(`/report/${((listReport - 1) * 4) + idx}`)}>

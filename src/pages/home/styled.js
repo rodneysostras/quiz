@@ -35,6 +35,12 @@ export const useStyles = makeStyles(() => ({
         margin: "15px auto",
     },
     reportBox: {
+        "& > h3": {
+            width: "100%",
+            textAlign: "center",
+            textTransform: "uppercase",
+            marginBottom: "0.313rem",
+        },
         "& > ul": {
             listStyle: "none",
             borderRadius: "15px",
