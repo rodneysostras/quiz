@@ -43,16 +43,22 @@ export const useStyles = makeStyles(() => ({
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                padding: "3px",
-                paddingLeft: "15px",
+                padding: "5px 15px",
                 backgroundColor: "#fff",
                 fontSize: "0.75rem",
-                cursor: "pointer",
                 "&:nth-child(2n-1)": {
                     backgroundColor: "#0000001f",
                 },
+                "&:hover": {
+                    backgroundColor: "#00000030",
+                    cursor: "pointer",
+                },
             },
         },
+    },
+    reportBoxIcon: {
+        fontSize: "1.25rem",
+        marginLeft: "10px",
     },
     paginationBox: {
         display: "flex",

@@ -150,13 +150,14 @@ export default function Home() {
                     <h3 align="center">Last quiz</h3>
                     <ul>
                         {quizReport.slice((listReport - 1) * 4, listReport * 4).map((item, idx) => (
-                            <li>
+                            <li onClick={() => navigate(`/report/${((listReport - 1) * 4) + idx}`)}>
                                 <div>
+                                    <strong>{((listReport - 1) * 4) + idx + 1} - </strong>
                                     {new Date(item.end_at).toLocaleString("en")}
                                 </div>
                                 <div>
                                     <span>{`${item.score}/${item.questions.length} score`}</span>
-                                    <Button onClick={() => navigate(`/report/${((listReport - 1) * 4) + idx}`)}>→</Button>
+                                    <span className={classes.reportBoxIcon}>→</span>
                                 </div>
                             </li>
                         ))}
