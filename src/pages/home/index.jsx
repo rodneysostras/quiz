@@ -156,7 +156,7 @@ export default function Home() {
                                 </div>
                                 <div>
                                     <span>{`${item.score}/${item.questions.length} score`}</span>
-                                    <Button onClick={() => navigate('/report/' + idx)}>→</Button>
+                                    <Button onClick={() => navigate(`/report/${((listReport - 1) * 4) + idx}`)}>→</Button>
                                 </div>
                             </li>
                         ))}
