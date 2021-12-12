@@ -18,30 +18,28 @@ import Checkout from "./pages/checkout";
 import Report from "./pages/report";
 import NotFound from "./pages/notfound";
 
+import Footer from "./components/footer";
+
 export default function App() {
     return (
         <React.Fragment>
             <CssBaseline />
-            <Container
-                maxWidth="sm"
-                style={{ margin: "2rem 0" }}
-                component="main"
-            >
-                <Box component="header">
+            <Container maxWidth="sm" component="main">
+                <Box component="header" style={{ marginTop: "1rem" }}>
                     <Typography
                         variant="h1"
                         align="center"
                         style={{
                             width: "100%",
                             fontFamily: "'Fascinate Inline', cursive",
-                            fontSize: "64px",
+                            fontSize: "4rem",
                         }}
                     >
                         QUIZ
                     </Typography>
                 </Box>
                 <Divider />
-                <Box padding="10px" component="article">
+                <Box padding="0.625rem" component="article">
                     <BrowserRouter>
                         <Routes>
                             <Route exact path="/" element={<Home />} />
@@ -53,6 +51,7 @@ export default function App() {
                     </BrowserRouter>
                 </Box>
             </Container>
+            <Footer />
         </React.Fragment>
     );
 }
