@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://github.com/rodneysostras/test-waproject-01/blob/main/icon-readme.png" alt="" height="150em"/>
+    <img src="https://raw.githubusercontent.com/rodneysostras/quiz/main/.github/icon-readme.png" alt="" height="150em"/>
 </div>
 
 # 📃 Quiz
@@ -10,17 +10,18 @@
     <img src="https://img.shields.io/website-up-down-green-red/https/quiz.rodneysostras.me?style=for-the-badge"/>
     <img src="https://img.shields.io/github/repo-size/rodneysostras/quiz?style=for-the-badge"/>
     <img src="https://img.shields.io/github/languages/count/rodneysostras/quiz?style=for-the-badge"/>
-    <img src="https://img.shields.io/bitbucket/issues/rodneysostras/quiz?style=for-the-badge"/>
-    <img src="https://img.shields.io/github/license/rodneysostras/quiz?style=for-the-badge"/>
+    <img src="https://img.shields.io/github/issues/rodneysostras/quiz?style=for-the-badge"/>
+    <!-- <img src="https://img.shields.io/github/license/rodneysostras/quiz?style=for-the-badge"/> -->
 </div>
 
 <br />
 
-<div align="center"><a href="https://quiz.rodneysostras.me/"><b>DEMO - https://quiz.rodneysostras.me/</b></a></div>
+<div align="center"><a href="https://quiz.rodneysostras.me/"><b>DEMO GITHUB-PAGES - https://quiz.rodneysostras.me/</b></a></div>
+<div align="center"><a href="https://quiz-rodneysostras.vercel.app/"><b>DEMO VERCEL - https://quiz-rodneysostras.vercel.app/</b></a></div>
 
 <br />
 
-<div align="center"><img src="https://github.com/rodneysostras/quiz/blob/main/previewer-devices-readme.png" alt="exemplo imagem" height="450em"/></div>
+<div align="center"><img src="https://raw.githubusercontent.com/rodneysostras/quiz/main/.github/previewer-readme.gif" alt="previwer quiz" height="450em"/></div>
 
 <div align="center"><em>Uma aplicação Web para responder questionários de perguntas sobre conhecimento gerais com as seguintes tecnologias.</em></div>
 
@@ -120,6 +121,7 @@ $ npm run start
 
 -   **[React](https://reactjs.org/)** • Framework Javascript open source utilizado para criar interfaces de usuário em paginas web.
 -   **[React router dom](https://v5.reactrouter.com/)** • Um componente que possibilita navegação entre componente gerando um roteamento de url.
+-   **[React context api](https://pt-br.reactjs.org/docs/context.html)** • Disponibiliza uma forma de passar dados entre os componentes sem necessitar passar props.
 -   **[Axios](https://github.com/axios/axios)** • Cliente HTTP leve semelhante à API Fetch nativa do JavaScript.
 -   **[Material-UI](https://v4.mui.com/)** • Biblioteca de componentes React para construir UI (User Interface).
 -   **[Formik](https://formik.org/)** • Componente para facilitar contrução de formulários.
