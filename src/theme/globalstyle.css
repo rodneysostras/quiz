@@ -10,11 +10,13 @@
 :root {
     --bg-color: #fafafa;
     --font-color: #191919;
+    --filter-color: invert(9%) sepia(0%) saturate(2097%) hue-rotate(62deg) brightness(118%) contrast(101%);
 }
 
 :root.dark-mode {
     --bg-color: #191919;
     --font-color: #fafafa;
+    --filter-color: invert(100%) sepia(0%) saturate(7482%) hue-rotate(286deg) brightness(126%) contrast(96%);
 }
 
 *,

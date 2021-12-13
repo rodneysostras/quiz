@@ -11,6 +11,7 @@ import { makeStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles(() => ({
     footerBox: {
         fontSize: "0.75rem",
+        fontWeight: 500,
         "& > section": {
             display: "flex",
             flexDirection: "row",
@@ -23,6 +24,11 @@ export const useStyles = makeStyles(() => ({
                 "& > li": {
                     display: "inline-block",
                     margin: "0 0.625rem",
+                    "& > a": {
+                        "& > img": {
+                            filter: "var(--filter-color)",
+                        },
+                    },
                 },
             },
         },
