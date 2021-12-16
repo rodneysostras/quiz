@@ -48,7 +48,7 @@
 
 🤩 quiz - Uma aplicação Web em ReactJS para responder questionários de perguntas sobre conhecimento gerais.
 
-Uma prova realizada para Wa Project que deve respeitar os requisitos abaixos.
+> Uma challenge realizada para Wa Project que deve respeitar os requisitos abaixos.
 
 ## 🎯 Requisitos
 
